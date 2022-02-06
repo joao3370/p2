@@ -1939,11 +1939,11 @@ buttons = [{buttonId: `.menu`,buttonText:{displayText: 'Menu'},type:1},
 
 imageMsg = (await bdr.prepareMessageMedia(fs.readFileSync(`./base de dados/lib/bot/fotos/teste.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`.//base de dados/lib/bot/fotos/teste.jpg`)})).imageMessage
 
-lzmodsdominabb = "inscreva-se no canal lz mods oficial estou quase nos 100 inscritos ajudae :)" 
+lzmodsdominabb = "Bom uso :)" 
 
 buttonsMessage = {
-contentText: lzmodsdominabb,
-footerText: "inscreva-se para mais videos como esse", imageMessage: imageMsg, buttons: buttons,
+contentText: Oii,
+footerText: "Ainda esta em testes", imageMessage: imageMsg, buttons: buttons,
  headerType: 4 
 } 
 prep = await bdr.prepareMessageFromContent(from,
