@@ -1932,6 +1932,26 @@ bdr.sendMessage(from, wew, video, {quoted: mek, mimetype: Mimetype.gif, thumbnai
 await requestCash(sender)
   break 
 
+case 'menu':
+let fotomenu = fs.readFileSync('./base de dados/lib/bot/fotos/GrupoFT.mp4')  
+
+sendMenu(from,
+[
+            {              
+              buttonId: `.menulist`,
+              buttonText: {
+                displayText:  `💠 Lista De Todos Menus 💠`,
+              },
+              type: 1
+            },
+          ]);
+break
+	
+case 'menuu':
+let fotomenuu = fs.readFileSync('./base de dados/lib/bot/fotos/GrupoFT.mp4')
+await lz.sendMessage(from, wew, video, {quoted: selo, caption: menuprincipal(prefix, pushname, hora, data, NomeDoBot, NickDoDono, NumeroDoDono)})
+break
+
 case 'menulist':
 let submenu = bdr.prepareMessageFromContent(from,{
   "listMessage": {
