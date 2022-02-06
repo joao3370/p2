@@ -1933,11 +1933,10 @@ await requestCash(sender)
   break 
 		
 case 'teste': 
-
-buttons = [{buttonId: `null`,buttonText:{displayText: 'âš¡ BY âš¡'},type:1},
+buttons = [{buttonId: `.menu`,buttonText:{displayText: 'âš¡ BY âš¡'},type:1},
 {buttonId:`null`,buttonText:{displayText:'âš¡ LZ âš¡'},type:1},{buttonId:`null`,buttonText:{displayText:'âš¡ MODS âš¡'},type:1}]
 
-imageMsg = (await client.prepareMessageMedia(fs.readFileSync(`./base de dados/lib/bot/MenuFT.mp4`), 'imageMessage', {thumbnail: fs.readFileSync(`.//base de dados/lib/bot/MenuFT.mp4`)})).imageMessage
+imageMsg = (await client.prepareMessageMedia(fs.readFileSync(`./base de dados/lib/bot/teste.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`.//base de dados/lib/bot/teste.jpg`)})).imageMessage
 
 lzmodsdominabb = "inscreva-se no canal lz mods oficial estou quase nos 100 inscritos ajudae :)" 
 
@@ -1949,8 +1948,6 @@ footerText: "inscreva-se para mais videos como esse", imageMessage: imageMsg, bu
 prep = await client.prepareMessageFromContent(from,
 {buttonsMessage},{quoted: mek})
 client.relayWAMessage(prep) 
-reply('#lz100subs')
-reply('ou peita ou respeita')
 break
 				
 case 'grupo':
