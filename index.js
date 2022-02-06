@@ -1930,7 +1930,41 @@ const selfchat_by_bdr = isAutconversa ? 'Ativado' : 'Desativado'
 wew = fs.readFileSync('./base de dados/lib/bot/fotos/MenuFT.mp4')
 bdr.sendMessage(from, wew, video, {quoted: mek, mimetype: Mimetype.gif, thumbnail:null, caption: help(p, hr, pushname, prema, checATM, useLevel, useXp, requireXp, patt, bateria, chatss, antilink_by_bdr, welcome_by_bdr, levelingon_by_bdr, antifaker_by_bdr, selfchat_by_bdr)})
 await requestCash(sender)
-  break    
+  break 
+
+case 'menulist':
+let submenu = bdr.prepareMessageFromContent(from,{
+  "listMessage": {
+            "title": `⚡ᎷᎬΝႮՏ ᏆΝҒᏆΝᏆͲᎽ ᏴϴͲ⚡`,
+            "description": `🌟 Total Menus: 4 🌟`,
+            "buttonText": "Clique Para Ver",
+            "listType": "SINGLE_SELECT",
+            "sections": [
+              {
+                "rows": [
+                  {
+                    "title": '🌴 Menu Principal 🌴',
+                    "rowId": `${prefix}menu`
+                  },
+                  {
+                    "title": '🎮 Menu Grupos 🎮',
+                    "rowId": `${prefix}menugrupos`
+                  },
+                  {
+                    "title": '🔵 Menu Logos 🔵',
+                    "rowId": `${prefix}menulogoss`
+                  },
+                    {
+                    "title": '👑 Menu Vip 👑',
+                    "rowId": `${prefix}menuvip`
+                    }
+                ]
+              }
+            ]                    
+          }
+}, {quoted: selo, contextInfo: info})
+bdr.relayWAMessage(submenu)
+break
   
 case 'grupo':
 addFilter(from)
