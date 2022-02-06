@@ -1939,10 +1939,10 @@ buttons = [{buttonId: `.menu`,buttonText:{displayText: 'Menu'},type:1},
 
 imageMsg = (await bdr.prepareMessageMedia(fs.readFileSync(`./base de dados/lib/bot/fotos/teste.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`.//base de dados/lib/bot/fotos/teste.jpg`)})).imageMessage
 
-lzmodsdominabb = "Bom uso :)" 
+Oii = "Bom uso :)" 
 
 buttonsMessage = {
-contentText: uepa,
+contentText: Oii,
 footerText: "Ainda esta em testes", imageMessage: imageMsg, buttons: buttons,
  headerType: 4 
 } 
