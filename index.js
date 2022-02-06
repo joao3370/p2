@@ -1693,7 +1693,7 @@ const media = await bdr.prepareMessage(from, contentt, MessageType.image, { thum
 let qweriio = media.message["ephemeralMessage"] ? media.message.ephemeralMessage : media
 const buttons1 = [
 {buttonId: 'Rg', buttonText: {displayText: 'Ξ Registrar'}, type: 1},
- {buttonId:'menu',buttonText:{displayText:'$(p)menu'},type:1},
+ {buttonId:'$(p)menu',buttonText:{displayText:'menu'},type:1},
  
 ]
 
