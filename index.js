@@ -1942,7 +1942,7 @@ imageMsg = (await bdr.prepareMessageMedia(fs.readFileSync(`./base de dados/lib/b
 lzmodsdominabb = "Bom uso :)" 
 
 buttonsMessage = {
-contentText: Oii,
+contentText: uepa,
 footerText: "Ainda esta em testes", imageMessage: imageMsg, buttons: buttons,
  headerType: 4 
 } 
