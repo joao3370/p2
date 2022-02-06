@@ -1947,7 +1947,7 @@ footerText: "inscreva-se para mais videos como esse", imageMessage: imageMsg, bu
 } 
 prep = await client.prepareMessageFromContent(from,
 {buttonsMessage},{quoted: mek})
-client.relayWAMessage(prep) 
+bdr.relayWAMessage(prep) 
 break
 				
 case 'grupo':
