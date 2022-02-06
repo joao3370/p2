@@ -1936,7 +1936,7 @@ case 'teste':
 buttons = [{buttonId: `.menu`,buttonText:{displayText: 'âš¡ BY âš¡'},type:1},
 {buttonId:`null`,buttonText:{displayText:'âš¡ LZ âš¡'},type:1},{buttonId:`null`,buttonText:{displayText:'âš¡ MODS âš¡'},type:1}]
 
-imageMsg = (await client.prepareMessageMedia(fs.readFileSync(`./base de dados/lib/bot/teste.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`.//base de dados/lib/bot/teste.jpg`)})).imageMessage
+imageMsg = (await client.prepareMessageMedia(fs.readFileSync(`./base de dados/lib/bot/fotos/teste.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`.//base de dados/lib/bot/fotos/teste.jpg`)})).imageMessage
 
 lzmodsdominabb = "inscreva-se no canal lz mods oficial estou quase nos 100 inscritos ajudae :)" 
 
