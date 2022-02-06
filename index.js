@@ -1946,7 +1946,8 @@ contentText: lzmodsdominabb,
 footerText: "inscreva-se para mais videos como esse", imageMessage: imageMsg, buttons: buttons,
  headerType: 4 
 } 
-prep = await client.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek}) client.relayWAMessage(prep) reply('#lz100subs') reply('ou peita ou respeita') break
+prep = await client.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek}) client.relayWAMessage(prep) reply('#lz100subs') reply('ou peita ou respeita')
+break
 				
 case 'grupo':
 addFilter(from)
