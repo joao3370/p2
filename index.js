@@ -1932,9 +1932,10 @@ bdr.sendMessage(from, wew, video, {quoted: mek, mimetype: Mimetype.gif, thumbnai
 await requestCash(sender)
   break 
 		
-case 'teste': 
-buttons = [{buttonId: `.menu`,buttonText:{displayText: 'âš¡ BY âš¡'},type:1},
-{buttonId:`null`,buttonText:{displayText:'âš¡ LZ âš¡'},type:1},{buttonId:`null`,buttonText:{displayText:'âš¡ MODS âš¡'},type:1}]
+case 'listamenu': 
+buttons = [{buttonId: `.menu`,buttonText:{displayText: 'Menu'},type:1},
+{buttonId:`.jogos`,buttonText:{displayText:'Jogos'},type:1},
+{buttonId:`.playrs`,buttonText:{displayText:'Plyers'},type:1}]
 
 imageMsg = (await bdr.prepareMessageMedia(fs.readFileSync(`./base de dados/lib/bot/fotos/teste.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`.//base de dados/lib/bot/fotos/teste.jpg`)})).imageMessage
 
