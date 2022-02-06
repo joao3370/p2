@@ -1931,61 +1931,23 @@ wew = fs.readFileSync('./base de dados/lib/bot/fotos/MenuFT.mp4')
 bdr.sendMessage(from, wew, video, {quoted: mek, mimetype: Mimetype.gif, thumbnail:null, caption: help(p, hr, pushname, prema, checATM, useLevel, useXp, requireXp, patt, bateria, chatss, antilink_by_bdr, welcome_by_bdr, levelingon_by_bdr, antifaker_by_bdr, selfchat_by_bdr)})
 await requestCash(sender)
   break 
+		
+case 'teste': 
 
-case 'menu':
-let fotomenu = fs.readFileSync('./base de dados/lib/bot/fotos/GrupoFT.mp4')  
+buttons = [{buttonId: `null`,buttonText:{displayText: 'âš¡ BY âš¡'},type:1},
+{buttonId:`null`,buttonText:{displayText:'âš¡ LZ âš¡'},type:1},{buttonId:`null`,buttonText:{displayText:'âš¡ MODS âš¡'},type:1}]
 
-sendMenu(from,
-[
-            {              
-              buttonId: `.menulist`,
-              buttonText: {
-                displayText:  `💠 Lista De Todos Menus 💠`,
-              },
-              type: 1
-            },
-          ]);
-break
-	
-case 'menuu':
-let fotomenuu = fs.readFileSync('./base de dados/lib/bot/fotos/GrupoFT.mp4')
-await lz.sendMessage(from, wew, video, {quoted: selo, caption: menuprincipal(prefix, pushname, hora, data, NomeDoBot, NickDoDono, NumeroDoDono)})
-break
+imageMsg = (await client.prepareMessageMedia(fs.readFileSync(`./videoyt/lz.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./videoyt/lz.jpg`)})).imageMessage
 
-case 'menulist':
-let submenu = bdr.prepareMessageFromContent(from,{
-  "listMessage": {
-            "title": `⚡ᎷᎬΝႮՏ ᏆΝҒᏆΝᏆͲᎽ ᏴϴͲ⚡`,
-            "description": `🌟 Total Menus: 4 🌟`,
-            "buttonText": "Clique Para Ver",
-            "listType": "SINGLE_SELECT",
-            "sections": [
-              {
-                "rows": [
-                  {
-                    "title": '🌴 Menu Principal 🌴',
-                    "rowId": `${prefix}menu`
-                  },
-                  {
-                    "title": '🎮 Menu Grupos 🎮',
-                    "rowId": `${prefix}menugrupos`
-                  },
-                  {
-                    "title": '🔵 Menu Logos 🔵',
-                    "rowId": `${prefix}menulogoss`
-                  },
-                    {
-                    "title": '👑 Menu Vip 👑',
-                    "rowId": `${prefix}menuvip`
-                    }
-                ]
-              }
-            ]                    
-          }
-}, {quoted: selo, contextInfo: info})
-bdr.relayWAMessage(submenu)
-break
-  
+lzmodsdominabb = "inscreva-se no canal lz mods oficial estou quase nos 100 inscritos ajudae :)" 
+
+buttonsMessage = {
+contentText: lzmodsdominabb,
+footerText: "inscreva-se para mais videos como esse", imageMessage: imageMsg, buttons: buttons,
+ headerType: 4 
+} 
+prep = await client.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek}) client.relayWAMessage(prep) reply('#lz100subs') reply('ou peita ou respeita') break
+				
 case 'grupo':
 addFilter(from)
 if (isLimit(sender)) return webPage(linguagem.cash_adquirir(pushname, p), {quoted: mek})
