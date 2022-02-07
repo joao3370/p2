@@ -3208,22 +3208,8 @@ sendFileFromUrl(res.all[0].image, image, {quoted: mek, caption: teks})
 res = await y2mateA(res.all[0].url)
 sendFileFromUrl(res[0].link, audio, {quoted: mek, mimetype: 'audio/mp4', filename: res[0].output})
 .catch(() => enviar(`[📍] Cᴏᴍᴀɴᴅᴏ : *${comando}*\n[❗] Mᴜsɪᴄᴀ : *${q}*\n[‼️] Sɪᴛᴜᴀᴄ̧ᴀ̃ᴏ : *Erro!* \n*『Tᴇɴᴛᴇ ᴜsᴀʀ ᴏᴜᴛʀᴏ ᴘʟᴀʏ』*`))
-break	
-
-case 'play2':
-addFilter(from)
-if (isLimit(sender)) return webPage(linguagem.cash_adquirir(pushname, p), {quoted: mek})  
-if (args.length < 1) return enviar('Qual o nome da música?')
-enviar(mess.espere)
-play_4 = await fetchJson(`https://api-gdr2.herokuapp.com/api/ytplay?q=${q}`)
-buffer = await getBuffer(play_4.result.thumb)
-lagu = await getBuffer(play_4.result.url)
-bdr.sendMessage(from, buffer, image, {quoted: mek, caption: `${play_4.result.title}`})
-bdr.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', quoted: mek})
-.catch(() => enviar(`[📍] Cᴏᴍᴀɴᴅᴏ : *${comando}*\n[❗] Mᴜsɪᴄᴀ : *${q}*\n[‼️] Sɪᴛᴜᴀᴄ̧ᴀ̃ᴏ : *Erro!* \n*『Tᴇɴᴛᴇ ᴜsᴀʀ ᴏᴜᴛʀᴏ ᴘʟᴀʏ』*`))
-await requestCash(sender)
 break
-
+	
 case 'play3':
 addFilter(from)
 if (isLimit(sender)) return webPage(linguagem.cash_adquirir(pushname, p), {quoted: mek}) 
