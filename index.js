@@ -3207,9 +3207,7 @@ teks = `
 sendFileFromUrl(res.all[0].image, image, {quoted: mek, caption: teks})
 res = await y2mateA(res.all[0].url)
 sendFileFromUrl(res[0].link, audio, {quoted: mek, mimetype: 'audio/mp4', filename: res[0].output})
-} catch {
-sendButMessage(m.chat, linguagem.nameByTobi(me), linguagem.playErro(p), [{buttonId: linguagem.sexo(), buttonText: {displayText: linguagem.randomSexo()}, type: 1}], {quoted: mek})
-}
+.catch(() => enviar(`[📍] Cᴏᴍᴀɴᴅᴏ : *${comando}*\n[❗] Mᴜsɪᴄᴀ : *${q}*\n[‼️] Sɪᴛᴜᴀᴄ̧ᴀ̃ᴏ : *Erro!* \n*『Tᴇɴᴛᴇ ᴜsᴀʀ ᴏᴜᴛʀᴏ ᴘʟᴀʏ』*`))
 break	
 
 case 'play2':
