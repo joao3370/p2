@@ -1933,9 +1933,9 @@ await requestCash(sender)
   break 
 		
 case 'listamenu': 
-buttons = [{buttonId: `.Menu`,buttonText:{displayText: '.Menu'},type:1},{buttonId:`.jogos`,buttonText:{displayText:'.jogos'},type:1},{buttonId:`.playrs`,buttonText:{displayText:'.playrs'},type:1}]
+buttons = [{buttonId: '.Menu',buttonText:{displayText: `.Menu`},type:1},{buttonId:`.jogos`,buttonText:{displayText:'.jogos'},type:1},{buttonId:`.playrs`,buttonText:{displayText:'.playrs'},type:1}]
 
-imageMessage = (await bdr.prepareMessage(fs.readFileSync(`./base de dados/lib/bot/fotos/teste.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`.//base de dados/lib/bot/fotos/teste.jpg`)})).imageMessage
+imageMsg = (await bdr.prepareMessage(fs.readFileSync(`./base de dados/lib/bot/fotos/teste.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`.//base de dados/lib/bot/fotos/teste.jpg`)})).imageMessage
 
 Oii = "Bom uso :)" 
 
@@ -3256,7 +3256,6 @@ break
 
 case 'play6':
 if (args.length < 1) return reply('Cade o Nome Da Musica Mano?? \nExemplo: ${prefix}play rei lacoste')
-reply(enviar.espere)
 anu = await fetchJson(`https://lzmods-api-v2.herokuapp.com/yt/playmp3?&musica=${q}&apikey=lzmods`)
 let resultadoplay = `
 🍀 a Musica「 ${q} 」Foi Encontrada Com Sucesso! 🍀
