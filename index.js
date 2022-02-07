@@ -3255,7 +3255,7 @@ await requestCash(sender)
 break
 
 case 'play6':
-if (args.length < 1) return reply(`Cade o Nome Da Musica Mano?? \nExemplo: ${prefix}play rei lacoste`)
+if (args.length < 1) return reply('Cade o Nome Da Musica Mano?? \nExemplo: ${prefix}play rei lacoste')
 reply(enviar.espere)
 anu = await fetchJson(`https://lzmods-api-v2.herokuapp.com/yt/playmp3?&musica=${q}&apikey=lzmods`)
 let resultadoplay = `
