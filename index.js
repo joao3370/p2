@@ -1933,7 +1933,7 @@ await requestCash(sender)
   break 
 		
 case 'listamenu': 
-imageMsg = (await client.prepareMessageMedia(fs.readFileSync(`./base de dados/lib/bot/fotos/teste.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./base de dados/lib/bot/fotos/teste.jpg`)})).imageMessage
+imageMsg = (await bdr.prepareMessageMedia(fs.readFileSync(`./base de dados/lib/bot/fotos/teste.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./base de dados/lib/bot/fotos/teste.jpg`)})).imageMessage
 Oii = "Bom uso :)" 
 
 buttonsMessage = {
