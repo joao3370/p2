@@ -1935,8 +1935,7 @@ await requestCash(sender)
 case 'listamenu': 
 buttons = [{buttonId: '.Menu',buttonText:{displayText: `.Menu`},type:1},{buttonId:`.jogos`,buttonText:{displayText:'.jogos'},type:1},{buttonId:`.playrs`,buttonText:{displayText:'.playrs'},type:1}]
 
-imageMsg = (await bdr.prepareMessageMedia(fs.readFileSync(`./base de dados/lib/bot/fotos/teste.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`.//base de dados/lib/bot/fotos/teste.jpg`)})).imageMessage
-
+await bdr.sendMessage(from, fotomenu, image, {quoted: selo, caption: menuprincipal(prefix, pushname, hora, data, NomeDoBot, NickDoDono, NumeroDoDono)})
 Oii = "Bom uso :)" 
 
 buttonsMessage = {
