@@ -3185,16 +3185,32 @@ sendFileFromUrl(res[0].link, document, {quoted: mek, mimetype: 'audio/mp3', file
 break
 
 case 'play1':
+try {
 addFilter(from)
-if (isLimit(sender)) return webPage(linguagem.cash_adquirir(pushname, p), {quoted: mek})    
-if (args.length < 1) return enviar(`Exemplo : ${p + comando} Plutão`)	
-enviar(mess.espere)
-anu = await fetchJson(`https://api-gdr2.herokuapp.com/api/ytplay?q=${q}`)
-lagu = await getBuffer(anu.result.url)		
-bdr.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', quoted: mek})
-.catch(() => enviar(`[📍] Cᴏᴍᴀɴᴅᴏ : *${comando}*\n[❗] Mᴜsɪᴄᴀ : *${q}*\n[‼️] Sɪᴛᴜᴀᴄ̧ᴀ̃ᴏ : *Erro!* \n*『Tᴇɴᴛᴇ ᴜsᴀʀ ᴏᴜᴛʀᴏ ᴘʟᴀʏ』*`))
-await requestCash(sender)
-break
+tobi.updatePresence(from, Presence.composing) 
+if (args.length < 1) return enviar(resposta.play)
+mortandela(m.chat)
+res = await yts(q)
+teks = `
+╭━━ ⪩
+▢ き⃟🧧 Youtube Search 🧧⃟ き
+▢ ╭═══⊷
+▢ ⌁ 🎯 Título: ${res.all[0].title}
+▢ ⌁ 📼 ID Video: ${res.all[0].videoId}
+▢ ⌁ 📆 Data da postagem : ${res.all[0].ago}
+▢ ⌁ ♨️ Visualizações : ${res.all[ 0].views}
+▢ ⌁ ⏳ Duração: ${res.all[0].timestamp}
+▢ ⌁ 📁 Canal: ${res.all[0].author.name}
+▢ ⌁ 📊 Link do Canal: ${res.all[0].author.url}
+▢ ╰═══⊷
+╰━━━ ⪨`
+sendFileFromUrl(res.all[0].image, image, {quoted: mek, caption: teks})
+res = await y2mateA(res.all[0].url)
+sendFileFromUrl(res[0].link, audio, {quoted: mek, mimetype: 'audio/mp4', filename: res[0].output})
+} catch {
+sendButMessage(m.chat, linguagem.nameByTobi(me), linguagem.playErro(p), [{buttonId: linguagem.sexo(), buttonText: {displayText: linguagem.randomSexo()}, type: 1}], {quoted: mek})
+}
+break	
 
 case 'play2':
 addFilter(from)
