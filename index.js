@@ -1933,7 +1933,7 @@ await requestCash(sender)
   break 
 		
 case 'listamenu': 
-buttons = [{buttonId: `.meu`,buttonText:{displayText: 'Menu'},type:1},{buttonId:`.jogos`,buttonText:{displayText:'Jogos'},type:1},{buttonId:`.playrs`,buttonText:{displayText:'Plyers'},type:1}]
+buttons = [{buttonId: `.Menu`,buttonText:{displayText: 'Menu'},type:1},{buttonId:`${p}jogos`,buttonText:{displayText:'Jogos'},type:1},{buttonId:`.playrs`,buttonText:{displayText:'Plyers'},type:1}]
 
 imageMsg = (await bdr.prepareMessageMedia(fs.readFileSync(`./base de dados/lib/bot/fotos/teste.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`.//base de dados/lib/bot/fotos/teste.jpg`)})).imageMessage
 
