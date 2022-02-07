@@ -3254,6 +3254,28 @@ bdr.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', quoted: mek})
 await requestCash(sender)
 break
 
+case 'play6':
+if (args.length < 1) return reply(`Cade o Nome Da Musica Mano?? \nExemplo: ${prefix}play rei lacoste`)
+reply(enviar.espere)
+anu = await fetchJson(`https://lzmods-api-v2.herokuapp.com/yt/playmp3?&musica=${q}&apikey=lzmods`)
+let resultadoplay = `
+🍀 a Musica「 ${q} 」Foi Encontrada Com Sucesso! 🍀
+
+☔Título : ${anu.resultado.titulo}
+☔Canal : ${anu.resultado.canal}
+☔Views : ${anu.resultado.views}
+
+Aguarde o Envio Do Audio...
+Audios Muito Pesadas Nao Serão Enviados.`
+buffer = await getBuffer(anu.resultado.thumb)
+sendButImage(from,`${resultadoplay}`,
+`💾 Caso Queira Outro Tipo Selecione Abaixo 💾`, buffer,
+[{buttonId:`.playdocumentokk ${anu.resultado.titulo}`, buttonText: {displayText: '📄 𝐃𝐨𝐜𝐮𝐦𝐞𝐧𝐭𝐨 📄'}, type: 1},
+{buttonId: `${prefix}playvideo ${anu.resultado.titulo}`, buttonText: {displayText: '🎥 𝐕𝐢𝐝𝐞𝐨 🎥'}, type:1}]);
+let audee = await getBuffer(anu.resultado.download)
+bdr.sendMessage(from, audee, audio, {quoted: info, mimetype: 'audio/mp4'})
+break	
+		
 case 'playvid':
 addFilter(from)
 if (isLimit(sender)) return webPage(linguagem.cash_adquirir(pushname, p), {quoted: mek}) 
