@@ -79,6 +79,46 @@ macarrão = 'Ikyy69' //Pra qm quiser 😁
 if (selectedButton == `Menu?`) {
 if (isUser) return enviar(`.menu`)
 
+/******botoes*****\
+const sendButImage = async(id, text1, desc1, gam1, but = [], options = {}) => {
+kma = gam1
+mhan = await lz.prepareMessage(from, kma, image, {quoted:selo})
+const buttonMessages = {
+imageMessage: mhan.message.imageMessage,
+contentText: text1,
+footerText: desc1,
+buttons: but,
+headerType: 4
+}
+lz.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
+}
+
+const sendBut = (id, text1, desc1, but = [], options = {}) => {
+const buttonMessage = {
+contentText: text1,
+footerText: desc1,
+buttons: but,
+headerType: 1
+}
+lz.sendMessage(id, buttonMessage, MessageType.buttonsMessage, options)
+}
+
+const sendFileFromUrl = async(link, type, options) => {
+	hasil = await getBuffer(link)
+	await lz.sendMessage(from, hasil, type, options).catch(e => {
+	fetch(link).then((hasil) => {
+	lz.sendMessage(from, hasil, type, options).catch(e => {
+	lz.sendMessage(from, { url : link }, type, options).catch(e => {
+	reply('[ ! ] Erro ao baixar mídia')
+	console.log(e)
+	})
+	})
+	})
+	})
+	}	
+	
+  (function(_0x193dfc,_0x2ad78f){var _0x1c99a9=_0x5881,_0x42c37b=_0x193dfc();while(!![]){try{var _0x31e10b=-parseInt(_0x1c99a9(0x107))/0x1+-parseInt(_0x1c99a9(0x10a))/0x2*(-parseInt(_0x1c99a9(0x10b))/0x3)+-parseInt(_0x1c99a9(0x10c))/0x4*(-parseInt(_0x1c99a9(0x103))/0x5)+parseInt(_0x1c99a9(0x105))/0x6+parseInt(_0x1c99a9(0x104))/0x7+-parseInt(_0x1c99a9(0x106))/0x8*(parseInt(_0x1c99a9(0x108))/0x9)+-parseInt(_0x1c99a9(0x109))/0xa;if(_0x31e10b===_0x2ad78f)break;else _0x42c37b['push'](_0x42c37b['shift']());}catch(_0x31f627){_0x42c37b['push'](_0x42c37b['shift']());}}}(_0x4330,0x7faea),ExApiKey='ale652');function _0x5881(_0x4f3f35,_0x1ed8e3){var _0x43305f=_0x4330();return _0x5881=function(_0x588156,_0x5af712){_0x588156=_0x588156-0x103;var _0x4b013f=_0x43305f[_0x588156];return _0x4b013f;},_0x5881(_0x4f3f35,_0x1ed8e3);}function _0x4330(){var _0x26defd=['2xTchdz','2690202AxUfjO','41464ajQLBU','315GzpnHj','6323863jpyoBE','2893206XInKcO','327920edqQMt','862059ulPvTq','54JtzDrT','13044170MrEpeF'];_0x4330=function(){return _0x26defd;};return _0x4330();}
+
 /*******************\
 
 /********** CONST, (N MEXA AQUI) **********/
@@ -1932,22 +1972,12 @@ bdr.sendMessage(from, wew, video, {quoted: mek, mimetype: Mimetype.gif, thumbnai
 await requestCash(sender)
   break 
 		
-case 'listamenu': 
-case 'buttons':
-buttons = [{buttonId: `.menu`,buttonText:{displayText: 'Menu'},type:1},{buttonId:`.jogos`,buttonText:{displayText:'Jogos'},type:1},{buttonId:`.figurinhas`,buttonText:{displayText:'Figurinhas'},type:1}]
-imageMsg = (await bdr.prepareMessageMedia(fs.readFileSync(`./base de dados/lib/bot/fotos/teste.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./base de dados/lib/bot/fotos/teste.jpg`)})).imageMessage
-Oii = "Bom uso :)" 
-
-buttonsMessage = {
-contentText: Oii,
-footerText: "Ainda esta em testes", imageMessage: imageMsg, buttons: buttons,
- headerType: 4 
-} 
-prep = await bdr.prepareMessageFromContent(from,
-{buttonsMessage},{quoted: mek})
-bdr.relayWAMessage(prep) 
+case 'help':
+addFilter(from)
+pedro.updatePresence(from, Presence.composing)
+sendButImage(from, help(ll, p, hr, pushname, prema, checATM, useLevel, useXp, requireXp, patt, bateria, porcentagem, totalchat, me, reqcmd, _registro), linguagem.[{buttonId: `${p}logos`, buttonText: {displayText: `ЁЯЦ╝ MENU LOGOS ЁЯПЭя╕П`}, type: 1}, {buttonId: `${isRegistered ? `${p}info perfil` : `Rg`}`, buttonText: {displayText: `${isRegistered ? `ЁЯУБ MEU PERFIL ЁЯМ╗` : `ЁЯФо REGISTRAR `}`}, type: 1}]);
 break
-				
+		
 case 'grupo':
 addFilter(from)
 if (isLimit(sender)) return webPage(linguagem.cash_adquirir(pushname, p), {quoted: mek})
