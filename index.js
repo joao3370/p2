@@ -1952,7 +1952,6 @@ bdr.sendMessage(from, result, sticker, {quoted: mek})}}
 /********** TODOS OS CMD APARTI DAQUI **********/
 switch(comando) {
 case 'menu':
-case 'ajuda':
 addFilter(from)
 if (isLimit(sender)) return webPage(linguagem.cash_adquirir(pushname, p), {quoted: mek})
 bdr.updatePresence(from, Presence.composing)
@@ -1972,7 +1971,7 @@ bdr.sendMessage(from, wew, video, {quoted: mek, mimetype: Mimetype.gif, thumbnai
 await requestCash(sender)
   break 
 		
-case 'help':
+case 'ajuda':
 addFilter(from)
 pedro.updatePresence(from, Presence.composing)
 sendButImage(from, help(ll, p, hr, pushname, prema, checATM, useLevel, useXp, requireXp, patt, bateria, porcentagem, totalchat, me, reqcmd, _registro), linguagem.[{buttonId: `${p}logos`, buttonText: {displayText: `ЁЯЦ╝ MENU LOGOS ЁЯПЭя╕П`}, type: 1}, {buttonId: `${isRegistered ? `${p}info perfil` : `Rg`}`, buttonText: {displayText: `${isRegistered ? `ЁЯУБ MEU PERFIL ЁЯМ╗` : `ЁЯФо REGISTRAR `}`}, type: 1}]);
