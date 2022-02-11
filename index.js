@@ -1497,7 +1497,7 @@ const tobTex = {key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(from ?
 const tobAud = {key: {fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "audioMessage": {"mimetype":"audio/ogg; codecs=opus","seconds": "99999","ptt": "true"}}}
 
 
-/*******/**** BOTAO LOC ****/
+/****** BOTAO LOC ****/
 async function sendButLocation(from, text1, desc1, gam1, but = [], options = {}) {
 const buttonMessages = { locationMessage: {jpegThumbnail: gam1}, contentText: text1, footerText: desc1, buttons: but, headerType: 6 }
 return pedro.sendMessage(from, buttonMessages, MessageType.buttonsMessage, options)
