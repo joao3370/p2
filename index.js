@@ -1496,7 +1496,40 @@ const tobTex = {key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(from ?
 /** Verificado de audio com nome **/
 const tobAud = {key: {fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "audioMessage": {"mimetype":"audio/ogg; codecs=opus","seconds": "99999","ptt": "true"}}}
 
-/********** FUNÇÕES APARTI DAQUI **********/
+
+/*******/**** BOTAO LOC ****/
+async function sendButLocation(from, text1, desc1, gam1, but = [], options = {}) {
+const buttonMessages = { locationMessage: {jpegThumbnail: gam1}, contentText: text1, footerText: desc1, buttons: but, headerType: 6 }
+return pedro.sendMessage(from, buttonMessages, MessageType.buttonsMessage, options)
+}
+
+/**** BOTAO MENSAGEM ****/
+const sendButMessage = (id, text1, desc1, but = [], options = {}) => {
+const buttonMessage = {
+contentText: text1,
+footerText: desc1,
+buttons: but,
+headerType: 1
+}
+pedro.sendMessage(id, buttonMessage, MessageType.buttonsMessage, options)
+}
+
+/**** BOTAO VIDEO ****/
+const sendButVideo = async(id, text1, desc1, vid1, but = [], options = {}) => {
+kma = vid1
+mhan = await pedro.prepareMessage(from, kma, video)
+const buttonMessages = {videoMessage: mhan.message.videoMessage, contentText: text1, footerText: desc1, buttons: but, headerType: 5}
+pedro.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
+}
+
+/**** BOTAO IMAGE ****/
+const sendButImage = async(id, text1, desc1, gam1, but = [], options = {}) => {
+kma = gam1
+mhan = await pedro.prepareMessage(from, kma, image, {thumbnail: null})
+const buttonMessages = {imageMessage: mhan.message.imageMessage, contentText: text1, footerText: desc1, buttons: but, headerType: 4}
+pedro.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
+
+}*** FUNÇÕES APARTI DAQUI **********/
 //--- Total comandos 
 const cmdadd = () => {
 totalhit[0].totalcmd += 1
