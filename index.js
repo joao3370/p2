@@ -1528,8 +1528,9 @@ kma = gam1
 mhan = await pedro.prepareMessage(from, kma, image, {thumbnail: null})
 const buttonMessages = {imageMessage: mhan.message.imageMessage, contentText: text1, footerText: desc1, buttons: but, headerType: 4}
 pedro.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
+}
 
-}*** FUNÇÕES APARTI DAQUI **********/
+*** FUNÇÕES APARTI DAQUI **********/
 //--- Total comandos 
 const cmdadd = () => {
 totalhit[0].totalcmd += 1
