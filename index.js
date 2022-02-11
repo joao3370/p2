@@ -2008,7 +2008,7 @@ await requestCash(sender)
 case 'ajuda':
 addFilter(from)
 pedro.updatePresence(from, Presence.composing)
-sendButImage(from, help(ll, p, hr, pushname, prema, checATM, useLevel, useXp, requireXp, patt, bateria, porcentagem, totalchat, me, reqcmd, _registro), linguagem.[{buttonId: `${p}logos`, buttonText: {displayText: `ЁЯЦ╝ MENU LOGOS ЁЯПЭя╕П`}, type: 1}, {buttonId: `${isRegistered ? `${p}info perfil` : `Rg`}`, buttonText: {displayText: `${isRegistered ? `ЁЯУБ MEU PERFIL ЁЯМ╗` : `ЁЯФо REGISTRAR `}`}, type: 1}]);
+sendButImage(from, help(ll, p, hr, pushname, prema, checATM, useLevel, useXp, requireXp, patt, bateria, porcentagem, totalchat, me, reqcmd, _registro), linguagem.[{buttonId: `${p}logos`, buttonText: {displayText: `ЁЯЦ╝ MENU LOGOS ЁЯПЭя╕П`}, type: 1},`ЁЯУБ MEU PERFIL ЁЯМ╗` : `ЁЯФо REGISTRAR `}`}, type: 1}]);
 break
 		
 case 'grupo':
