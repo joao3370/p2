@@ -1530,7 +1530,7 @@ const buttonMessages = {imageMessage: mhan.message.imageMessage, contentText: te
 pedro.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 }
 
-*** FUNÇÕES APARTI DAQUI **********/
+/******** FUNÇÕES APARTI DAQUI **********/
 //--- Total comandos 
 const cmdadd = () => {
 totalhit[0].totalcmd += 1
